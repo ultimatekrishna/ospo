@@ -1,0 +1,109 @@
+
+/** Defaults */
+@font-face { font-family: 'AllianzNeo'; src: url('AllianzNeoW01-Regular.woff2') format('woff2');  }
+* { font-family: 'AllianzNeo'}
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 16px; }
+
+
+/** Header structure */
+.header { width: 100%; position: fixed; top: 0; left: 0; height: 120px; background-color: #ffffff; }
+.header-row { height: 60px; width: 100%; align-items: center; display: flex; padding: 0px 32px 0px 32px; border-bottom: 1px solid #d9d9d9; box-sizing: border-box; }
+
+/** Header menu */
+.header a {color: rgb(65,65,65); font-size: 16px; font-weight: 400; margin: 4px 32px 4px 0px; text-decoration: none;}
+.header a:hover {color: rgb(0, 97, 146); text-decoration: underline; text-decoration-style: solid; text-decoration-color: rgb(0, 97, 146); text-underline-offset: 9px; text-decoration-thickness: 4px;}
+.header a.active {color: rgb(0, 97, 146); font-weight: 700; text-decoration: underline; text-underline-offset: 9px; text-decoration-thickness: 4px;}
+
+/** Header images */
+img.allianz {width: 120px; margin-right: 32px; }
+img.bars { width: 14px; padding: 8px; border-radius: 4px; margin-right: 16px; }
+img.bars:hover {background-color: rgb(236, 236, 236)}
+img.github {width: 24px; margin: 4px 4px 4px auto; justify-content: flex-end;}
+
+
+/** Side nav structure  */
+.side-nav { width: 240px; position: fixed; z-index: 1; top: 60px; left: 0; bottom: 0; background-color: rgb(245,245,245); overflow-x: hidden; overflow-y: auto; padding-top: 10px; }
+
+/** Side nave collabsible menu categories */
+.collapsible { line-height: 24px; padding: 4px 8px 4px 24px; text-decoration: none; font-size: 14px; font-weight: 400; color: rgb(65,65,65); display: block; cursor: pointer; user-select: none; }
+.collapsible .chevron {width: 8px;  margin-right: 12px; padding-bottom: 2px; vertical-align: middle;transition: all .1s linear; }
+.collapsible:hover { background-color: rgb(235, 235, 235); }
+.collapsible + .items { display: none; }
+.collapsible.active .chevron { transform: rotate(90deg); }
+.collapsible.active { font-weight: 700; }
+.collapsible.active + .items { display: block; }
+
+/** Side nav menu items */
+.item { line-height: 24px; padding: 4px 8px 4px 48px; text-decoration: none; font-size: 14px; font-weight: 400; color: rgb(65,65,65); display: block; user-select: none; }
+.item.active { color: rgb(255,255,255); background-color: rgb(0,122,179); }
+.item:hover:not(.active)  { background-color: rgb(235, 235, 235); }
+
+
+/** Content area */
+main { overflow: auto; position: absolute; left: 0px; top: 60px; right: 0; bottom: 0; }
+main.with-side-nav { left: 240px; }
+main .page-content { padding: 0px 0px 0px 32px; }
+
+/** Content elements */
+.page-content {
+  color: rgb(65,65,65);
+}
+.page-content h1 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.page-content h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.page-content a {
+  color: rgb(0, 97, 146);
+  font-weight: 600;
+  text-decoration-line: none;
+}
+.page-content a:hover {
+  color: #008ed6;
+}
+
+.page-content ol,ul {
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+
+.page-content ol ul {
+  margin-left: 24px;
+  margin-bottom: 0px;
+}
+
+.page-content ul li {
+  font-size: 16px;
+  list-style-type: square;
+  line-height: 24px;
+}
+
+.page-content ol li {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/** Footer */
+footer { padding: 32px; }
+footer .copyright { font-weight: 600; font-size: 16px; color: rgb(118,118,118); }
+footer a { font-weight: 400; font-size: 16px; color: rgb(118,118,118); padding-left: 32px; text-decoration: none; }
+
+/** Responsive design */
+.header-row.mobile {display: none;}
+@media screen and (max-width: 600px) {
+  .side-nav { top: 120px; }
+  .side-nav:not(.active) { display: none; }
+  main {left: 0px !important; top: 120px;}
+  .header-row.desktop nav {display: none; }
+  .header-row.mobile {display: flex;}
+}
+

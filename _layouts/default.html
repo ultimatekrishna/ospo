@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Allianz Open Source</title>
+    <link rel="icon" type="image/x-icon" href="/_layouts/assets/favicon.png">
+    <link rel="stylesheet" href="/_layouts/assets/main.css">
+  </head>
+  
+  <body>
+
+  <!-- Set flags used to render top menu and side navidation -->
+  {% if page.url == '/' %} 
+    {% assign show-sidenav = false %} 
+    {% assign welcome-menu = 'active' %} 
+  {% elsif page.url == '/404.html' %}
+    {% assign show-sidenav = false %}
+  {% else %}
+    {% assign show-sidenav = true %}
+    {% assign doc-menu = 'active' %} 
+  {% endif %}
+
+  <!-- Top menu-->
+  <header class="header">
+    <div class="header-row desktop">
+      <img class="allianz" src="/_layouts/assets/allianz_logo_with_name.svg"/>
+      <nav>
+        <a href="/" class="{{welcome-menu}}">Welcome</a>
+        <a href="/documentation/" class="{{doc-menu}}">Documentation</a>
+      </nav>
+      <img class="github" src="/_layouts/assets/github.svg"/>
+    </div>
+    <div class="header-row mobile">
+      {% if show-sidenav %}
+      <img class="bars" src="/_layouts/assets/bars.svg"/>
+      {% endif %}
+      <nav>
+        <a href="/" class="{{welcome-menu}}">Welcome</a>
+        <a href="/documentation/" class="{{doc-menu}}">Documentation</a>
+      </nav>
+    </div>
+  </header>
+  
+ 
+  <!-- Side navigation -->
+  {% if show-sidenav %}
+  <div class="side-nav">
+    {% for category in site.doc-categories %}
+    <a class="collapsible" id="{{category}}"><img class="chevron" src="/_layouts/assets/chevron-right.svg"/><span>{{category}}</span></a>
+    <span class="items">
+      {% assign categoryDowncase = category | downcase %}
+      {% assign sidenav-items = (site.pages | where_exp: 'item', 'item.path contains categoryDowncase' ) %} 
+      {% for item in sidenav-items %}
+        <a class= "item {% if item.title == page.title %} active {% endif %}" href="{{item.url}}">{{item.title}}</a>
+      {% endfor %}
+    </span>
+    {% endfor %}
+  </div>
+  <script>
+      // toggle collabsible menu categories
+      var collabsibleMenuItems = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < collabsibleMenuItems.length; i++) {
+          if (localStorage.getItem(collabsibleMenuItems[i].id) == 'true') {
+            collabsibleMenuItems[i].classList.add("active");
+          }
+          collabsibleMenuItems[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            localStorage.setItem(this.id, this.classList.contains("active"));
+          });
+      }
+      // toggle side-nav on mobile devices
+      var barsIcon = document.getElementsByClassName("bars")[0];
+      var sideNav = document.getElementsByClassName("side-nav")[0];
+      barsIcon.addEventListener("click", function() {
+          sideNav.classList.toggle("active");
+      });
+  </script>
+  {% endif %}
+
+  <!-- Main content dependant on side-navigation -->
+  <main {% if show-sidenav %} class="with-side-nav" {% endif %} aria-label="Content">
+    <div class="page-content">
+      {% if show-sidenav %}
+      <h1>{{ page.title }}</h1>
+      {% endif %}
+      {{ content }}
+    </div>
+    <footer>
+      <span class="copyright">&copy; Allianz. All Rights Reserved.</span>
+      <a href="https://www.allianz.com/en/info/credits-allianz-se/" >Imprint</a>
+      <a href="https://www.allianz.com/en/info/terms-of-use/" >Terms of Use</a>
+    </footer>
+  </main>
+
+  </body>
+</html>
