@@ -25,7 +25,7 @@ img.github {width: 24px; margin: 4px 4px 4px auto; justify-content: flex-end;}
 /** Side nav structure  */
 .side-nav { width: 240px; position: fixed; z-index: 1; top: 60px; left: 0; bottom: 0; background-color: rgb(245,245,245); overflow-x: hidden; overflow-y: auto; padding-top: 10px; }
 
-/** Side nave collabsible menu categories */
+/** Side nave collapsible menu categories */
 .collapsible { line-height: 24px; padding: 4px 8px 4px 24px; text-decoration: none; font-size: 14px; font-weight: 400; color: rgb(65,65,65); display: block; cursor: pointer; user-select: none; }
 .collapsible .chevron {width: 8px;  margin-right: 12px; padding-bottom: 2px; vertical-align: middle;transition: all .1s linear; }
 .collapsible:hover { background-color: rgb(235, 235, 235); }
