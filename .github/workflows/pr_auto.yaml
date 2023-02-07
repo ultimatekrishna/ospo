@@ -1,0 +1,16 @@
+---
+# This workflow is triggered automatically for pull requests and runs tests
+name: pr_auto
+
+on:
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+  build-test:
+    name: Run make ci-build in dev container
+    uses: devcontainers/ci@v0.2
+    with:    
+      push: never
+      runCmd: make build
