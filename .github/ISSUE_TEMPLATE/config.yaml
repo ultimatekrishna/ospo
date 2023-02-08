@@ -1,4 +1,4 @@
-blank_issues_enabled: true 
+blank_issues_enabled: true # Force Template Usage
 contact_links:
   - name: Ask a questions
     #TODO update link
