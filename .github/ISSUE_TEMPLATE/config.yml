@@ -1,0 +1,5 @@
+blank_issues_enabled: true 
+contact_links:
+  - name: Ask a questions
+    url: https://github.com/cheld/ospo/discussions/categories/q-a
+    about: Get help in the support forum
