@@ -82,9 +82,6 @@
   <!-- Main content dependant on side-navigation -->
   <main {% if show-sidenav %} class="with-side-nav" {% endif %} aria-label="Content">
     <div class="page-content">
-      {% if show-sidenav %}
-      <h1>{{ page.title }}</h1>
-      {% endif %}
       {{ content }}
     </div>
     <footer>
