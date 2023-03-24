@@ -53,7 +53,7 @@
 }
 
 .flex-container>div {
-    background-color: #f1f1f1;
+    background-color: #F5F5F5;
     width: 400px;
     margin: 10px;
     text-align: center;
@@ -61,8 +61,6 @@
     overflow-y: auto;
     padding-right: 2em;
     height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .purpose-flex-container {
@@ -73,18 +71,39 @@
     padding-bottom: 50px;
 }
 
-.purpose-flex-container>div {
-    background-color: #f1f1f1;
+.purpose-flex-container>div:nth-child(1){
+    background-color: #F5F0E0;
     width: 400px;
     margin: 10px;
     text-align: end;
     font-size: 20px;
     overflow-y: auto;
     padding-right: 2em;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     height: 300px;
 }
+
+.purpose-flex-container>div:nth-child(2){
+    background-color: #E6F4F6;
+    width: 400px;
+    margin: 10px;
+    text-align: end;
+    font-size: 20px;
+    overflow-y: auto;
+    padding-right: 2em;
+    height: 300px;
+}
+
+.purpose-flex-container>div:nth-child(3){
+    background-color: #F6E5EA;
+    width: 400px;
+    margin: 10px;
+    text-align: end;
+    font-size: 20px;
+    overflow-y: auto;
+    padding-right: 2em;
+    height: 300px;
+}
+
 
 .community-resources {
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
