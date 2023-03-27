@@ -43,7 +43,7 @@ img.github {width: 24px; margin: 4px 4px 4px auto; justify-content: flex-end;}
 /** Content area */
 main { overflow: auto; position: absolute; left: 0px; top: 60px; right: 0; bottom: 0; }
 main.with-side-nav { left: 240px; }
-main .page-content { padding: 0px 0px 0px 32px; }
+main .page-content { padding: 0px 0px 0px 0px; }
 
 /** Content elements */
 .page-content {
