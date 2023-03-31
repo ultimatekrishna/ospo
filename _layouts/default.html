@@ -15,9 +15,6 @@
   {% if page.url == '/' %} 
     {% assign show-sidenav = false %} 
     {% assign welcome-menu = 'inactive' %}
-  {% elsif page.url == '/index' %}
-    {% assign show-sidenav = false %}
-    {% assign welcome-menu = 'active' %}  
   {% elsif page.url == '/404.html' %}
     {% assign show-sidenav = false %}
   {% else %}
