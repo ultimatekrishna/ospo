@@ -83,7 +83,9 @@
   <!-- Main content dependant on side-navigation -->
   <main {% if show-sidenav %} class="with-side-nav" {% endif %} aria-label="Content">
     <div class="page-content">
-      {{ content }}
+      <div {% if doc-menu  %} class="documentation" {% elsif welcome-menu %} class="welcome" {% endif %}> 
+        {{ content }}
+      </div>
     </div>
     <footer>
       <span class="copyright">&copy; Allianz. All Rights Reserved.</span>
