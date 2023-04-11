@@ -1,9 +1,9 @@
 # menu ordering of documentation page
 doc-menu-categories:
-  - "Using"
-  - "Contributing"
-  - "Releasing"
-  - "How-tos"
+  - "using"
+  - "contributing"
+  - "releasing"
+  - "how-tos"
 
 # Create an index of all markdown files to generate menu
 collections:
