@@ -3,7 +3,7 @@
 {
 	"name": "Jekyll",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:0-buster",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:0.1.19-buster",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

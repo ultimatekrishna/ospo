@@ -10,9 +10,6 @@ This website is therefore a guide, primarily for Allianz employees, on how to ad
 ## Topics
 
 * Using open source code: Policies on what to be aware of when adopting open source code in a Allianz project.
-  
 * Contributing open source code: Policies on what to be aware of when contributing code upstream to a Non-Allianz project.
-
 * Releasing an open source project: A step by step guide on what to do before you can release a project and guidelines on how to maintain a project
-
 * How-to Guides: Guidance on copyright, licensing and open source best practices.

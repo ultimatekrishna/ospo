@@ -6,31 +6,10 @@ title: Project
 
 Releasing a new open source project is a simple and fast process when you are already following Allianz rules of play:
 
-1. Get Sign-off: Ensure you have organizational buy-in from your lead and that your project is possible to open source
-2. Prepare your repository: scan your repository for potential security or legal problems.
-3. Be Compliant: Ensure your project is compliant with rules of play and open source best practices
-4. Get Reviewed: The Allianz open source review group is responsible for reviewing your project
-
-<style>
-.review-button {
-  border-style: solid;
-  border-color: #006192;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.review-button:hover{
-  background-color: #006192;
-  color: white !important;
-  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
-}
-</style>
-<a class="review-button" target="_blank" href="https://forms.office.com/e/da9CX1ZBir">Submit your project for review (internal)</a>
+1. __Get Sign-off__: Ensure you have organizational buy-in from your lead and that your project is possible to open source
+2. __Prepare your repository__: scan your repository for potential security or legal problems.
+3. __Be Compliant__: Ensure your project is compliant with rules of play and open source best practices
+4. __Get Reviewed__: The Allianz open source review group is responsible for reviewing your project
 
 ## Get Sign-off
 
@@ -109,6 +88,28 @@ Preparing a repository for open sourcing goes beyond ensuring it is in complianc
 ## Get Reviewed
 
 When you have checked off the compliance checklist and prepared your code for release, request a review from the Open Source Review Group who will help you setup a Github repository and sign off on open sourcing your code.
+
+
+<style>
+.review-button {
+  border-style: solid;
+  border-color: #006192;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.review-button:hover{
+  background-color: #006192;
+  color: white !important;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
+}
+</style>
+<a class="review-button" target="_blank" href="https://forms.office.com/e/da9CX1ZBir">Submit your project for review (internal)</a>
 
 ## Release
 
